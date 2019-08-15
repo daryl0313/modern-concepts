@@ -5,7 +5,6 @@
   "scripts": {
     "ng": "ng",
     "nx": "nx",
-    "nx:react": "nx generate @nrwl/react:application react",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
