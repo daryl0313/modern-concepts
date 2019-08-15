@@ -6,7 +6,7 @@
       "schematics": {},
       "root": "apps/angular",
       "sourceRoot": "apps/angular/src",
-      "prefix": "modern-concepts",
+      "prefix": "mc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
