@@ -17,5 +17,4 @@ export class ParentComponent implements OnInit {
   public handleNumberOutput(newNumberValue: number) {
     this.myNumberValue = newNumberValue;
   }
-
 }
