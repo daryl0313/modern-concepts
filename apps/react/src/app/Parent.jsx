@@ -3,7 +3,8 @@ import { Child } from './Child';
 
 export class Parent extends React.Component {
   state = {
-    myNumberValue: 6
+    myNumberValue: 6,
+    myDateValue: new Date()
   };
 
   handleNumberOutput = (newNumberValue) => {
@@ -11,6 +12,12 @@ export class Parent extends React.Component {
       myNumberValue: newNumberValue
     });
   }
+
+  getCustomDate = () => {
+    return this.state.myDateValue.toLocaleString();
+  }
+
+  childRef = React.createRef();
 
   render() {
     const hostStyles = {
@@ -22,7 +29,9 @@ export class Parent extends React.Component {
       <div style={hostStyles}>
         <h2>👩 Parent Component</h2>
 
-        <Child stringInput="This is my string input value" numberInput={this.state.myNumberValue} onNumberOutputChange={this.handleNumberOutput} />
+        <Child ref={this.childRef} stringInput="This is my string input value" numberInput={this.state.myNumberValue} onNumberOutputChange={this.handleNumberOutput} />
+
+        Custom Date: <div>{this.getCustomDate()}</div>
       </div>
     );
   }
