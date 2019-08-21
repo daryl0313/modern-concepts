@@ -4,7 +4,8 @@ import { Child } from './Child';
 export class Parent extends React.Component {
   state = {
     myNumberValue: 6,
-    myDateValue: new Date()
+    myDateValue: new Date(),
+    myArray: []
   };
 
   handleNumberOutput = (newNumberValue) => {
@@ -32,6 +33,10 @@ export class Parent extends React.Component {
         <Child ref={this.childRef} stringInput="This is my string input value" numberInput={this.state.myNumberValue} onNumberOutputChange={this.handleNumberOutput} />
 
         Custom Date: <div>{this.getCustomDate()}</div>
+
+        {this.state.myNumberValue && <div>...</div>}
+
+        {this.state.myArray.map(v => <div key={v.id}>{v.name}</div>)}
       </div>
     );
   }
