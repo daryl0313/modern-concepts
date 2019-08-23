@@ -7,9 +7,10 @@ import { ChildComponent } from './components/child.component';
 import { DoubleComponent } from './double.component';
 import { CustomDatePipe } from './custom-date.pipe';
 import { GrandParentComponent } from './components/grand-parent.component';
+import { PureComponentComponent } from './pureComponent/pure-component.component';
 
 @NgModule({
-  declarations: [AppComponent, ParentComponent, ChildComponent, DoubleComponent, CustomDatePipe, GrandParentComponent],
+  declarations: [AppComponent, ParentComponent, ChildComponent, DoubleComponent, CustomDatePipe, GrandParentComponent, PureComponentComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
