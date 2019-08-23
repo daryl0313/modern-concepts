@@ -1,13 +1,14 @@
 import React from 'react';
-import { Parent } from './Parent';
+import { GrandParent } from './components/GrandParent';
 
 import './app.css';
 
 export const App = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>👴 Grandparent Component</h1>
-      <Parent />
+      <h1>App Component</h1>
+
+      <GrandParent />
     </div>
   );
 };
