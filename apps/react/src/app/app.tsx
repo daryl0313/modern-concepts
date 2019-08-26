@@ -2,6 +2,7 @@ import React from 'react';
 import { GrandParent } from './components/GrandParent';
 
 import './app.css';
+import Composition from './composition/Composition';
 
 export const App = () => {
   return (
@@ -9,6 +10,8 @@ export const App = () => {
       <h1>App Component</h1>
 
       <GrandParent />
+
+      {/* <Composition /> */}
     </div>
   );
 };
