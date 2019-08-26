@@ -13,9 +13,15 @@ import { MultipleComponent } from './composition/multiple.component';
 import { MainComponent } from './composition/main.component';
 
 @NgModule({
-  declarations: [AppComponent, ParentComponent, ChildComponent, DoubleComponent, CustomDatePipe, GrandParentComponent, PureComponentComponent, SimpleComponent, MultipleComponent, MainComponent],
+  declarations: [
+    AppComponent,
+    ParentComponent, ChildComponent, GrandParentComponent,
+    PureComponentComponent,
+    SimpleComponent, MultipleComponent, MainComponent,
+    DoubleComponent, CustomDatePipe
+  ],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

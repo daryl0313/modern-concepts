@@ -1,11 +1,30 @@
-Simple:
-<mc-simple>
-  <div>Please render this content!</div>
-</mc-simple>
+<div class="bordered">
+  <h1>
+    Simple:
+  </h1>
+  <mc-simple>
+    <div>Please render this content!</div>
+  </mc-simple>
+</div>
 
-Multiple:
-<mc-multiple>
-  <div child1>This is the First Child!</div>
+<div class="bordered">
+  <h1>
+    Provided Data:
+  </h1>
+  <mc-simple>
+    <div>
+      <div *ngFor="let x of values">Value: {{x}}</div>
+    </div>
+  </mc-simple>
+</div>
 
-  <div child2>This is the Second Child!</div>
-</mc-multiple>
+<div class="bordered">
+  <h1>
+    Multiple:
+  </h1>
+  <mc-multiple>
+    <div child1>This is the First Child!</div>
+
+    <div child2>This is the Second Child!</div>
+  </mc-multiple>
+</div>
