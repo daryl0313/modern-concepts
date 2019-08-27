@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { SimpleCompositionComponent } from './1SimpleComposition';
-import { InjectedCompositionComponent } from './2InjectedComposition';
-import { MultipleCompositionComponent } from './3MultipleComposition';
+import { SimpleCompositionComponent } from './SimpleComposition';
+import { InjectedCompositionComponent } from './InjectedComposition';
+import { MultipleCompositionComponent } from './MultipleComposition';
 
 const sectionStyles: React.CSSProperties = {
   border: 'solid 1px grey',
