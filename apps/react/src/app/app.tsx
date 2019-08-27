@@ -2,6 +2,7 @@ import React from 'react';
 import { GrandParent } from './components/GrandParent';
 import { PureClassComponent, PureFunctionComponent } from "./pureComponent/PureComponentExamples";
 import Composition from './composition/Composition';
+import { HigherOrderComponentConsumer, HookConsumer } from "./composition/HocAndHooks/HocAndHooks";
 
 import './app.css';
 
@@ -10,13 +11,17 @@ export const App = () => {
     <div style={{ textAlign: 'center' }}>
       <h1>App Component</h1>
 
-      <GrandParent />?
+      <GrandParent />
 
       {/* <PureClassComponent displayThisValue="Value" />
       <br />
       <PureFunctionComponent displayThisValue="Value" /> */}
 
       {/* <Composition /> */}
+
+      {/* <HigherOrderComponentConsumer />
+      <br />
+      <HookConsumer /> */}
     </div>
   );
 };
