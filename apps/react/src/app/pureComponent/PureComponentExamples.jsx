@@ -1,33 +1,41 @@
 import * as React from 'react';
 
 export class PureClassComponent extends React.PureComponent {
+  state = { clickCount: 0 };
+
   handleSomeEvent = (newValue) => {
     // 👇 will trigger a re-render
-    this.setState({
-      myState: newValue
-    });
+    this.setState(prev => ({
+      clickCount: prev.clickCount + 1
+    }));
   }
   render() {
     return (
-      <div onClick={this.handleSomeEvent}>
-        {this.props.displayThisValue}
-        {this.state.myState}
-      </div>
+      <button onClick={this.handleSomeEvent}>
+        Click Me [Class] - (
+        {this.props.displayThisValue}:
+        {this.state.clickCount}
+        )
+      </button>
     );
   }
 }
 
+/** @type React.FunctionComponent<{ displayThisValue: string }> */
 export const PureFunctionComponent = React.memo(props => {
-  const [myState, setMyState] = React.useState();
+  const [clickCount, setclickCount] = React.useState(0);
 
-  const handleSomeEvent = React.useCallback(newValue => {
-    setMyState(newValue);
-  })
+  const handleSomeEvent = () => {
+    // 👇 will trigger a re-render
+    setclickCount(clickCount + 1);
+  }
 
   return (
-    <div onClick={handleSomeEvent}>
-      {props.displayThisValue}
-      {myState}
-    </div>
+    <button onClick={handleSomeEvent}>
+      Click Me [Function] - (
+        {props.displayThisValue}:
+        {clickCount}
+      )
+    </button>
   );
 });
