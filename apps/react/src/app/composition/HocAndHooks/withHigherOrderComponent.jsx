@@ -25,7 +25,10 @@ export function withHocExample(Component) {
     <WrapperComponent>
       {(service, helperFunction, value) => {
         return (
-          <Component service={service} helperFunction={helperFunction} hocValue={value} />
+          <>
+            <div style={{ color: 'red' }}>This was added by the Higher Order Comopnent</div>
+            <Component service={service} helperFunction={helperFunction} hocValue={value} />
+          </>
         );
       }}
     </WrapperComponent>

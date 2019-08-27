@@ -11,13 +11,14 @@ import { PureComponentComponent } from './pureComponent/pure-component.component
 import { SimpleComponent } from './composition/simple.component';
 import { MultipleComponent } from './composition/multiple.component';
 import { MainComponent } from './composition/main.component';
+import { MyDirectiveDirective } from './composition/directives/my-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ParentComponent, ChildComponent, GrandParentComponent,
     PureComponentComponent,
-    SimpleComponent, MultipleComponent, MainComponent,
+    SimpleComponent, MultipleComponent, MainComponent, MyDirectiveDirective,
     DoubleComponent, CustomDatePipe
   ],
   imports: [BrowserModule],
