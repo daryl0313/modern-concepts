@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { ParentComponent } from './components/parent.component';
@@ -21,7 +22,7 @@ import { MyDirectiveDirective } from './composition/directives/my-directive.dire
     SimpleComponent, MultipleComponent, MainComponent, MyDirectiveDirective,
     DoubleComponent, CustomDatePipe
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
