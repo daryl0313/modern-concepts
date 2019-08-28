@@ -14,12 +14,6 @@ export class Parent extends React.Component {
     });
   }
 
-  getCustomDate = () => {
-    return this.state.myDateValue.toLocaleString();
-  }
-
-  childRef = React.createRef();
-
   render() {
     const hostStyles = {
       border: 'solid 1px navy',
@@ -30,13 +24,7 @@ export class Parent extends React.Component {
       <div style={hostStyles}>
         <h2>👩 Parent Component</h2>
 
-        <Child ref={this.childRef} stringInput="This is my string input value" numberInput={this.state.myNumberValue} onNumberOutputChange={this.handleNumberOutput} />
-
-        Custom Date: <div>{this.getCustomDate()}</div>
-
-        {this.state.myNumberValue && <div>...</div>}
-
-        {this.state.myArray.map(v => <div key={v.id}>{v.name}</div>)}
+        <Child stringInput="This is my string input value" numberInput={this.state.myNumberValue} onNumberOutputChange={this.handleNumberOutput} />
       </div>
     );
   }

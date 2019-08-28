@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Child = React.memo((props) => {
+export const Child = (props) => {
   const handleButtonClick = () => {
     props.onNumberOutputChange(props.numberInput + 2);
   }
@@ -24,4 +24,4 @@ export const Child = React.memo((props) => {
       <button onClick={handleButtonClick}>Click Me</button>
     </div>
   )
-})
+}

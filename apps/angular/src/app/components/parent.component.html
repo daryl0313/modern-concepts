@@ -1,9 +1,3 @@
 <h2>👩 Parent Component</h2>
 
 <mc-child stringInput="This is my string input value" [numberInput]="myNumberValue" (numberOutput)="handleNumberOutput($event)"></mc-child>
-
-<div *ngIf="myNumberValue > 0">
-    Custom Date: {{ myDateValue | customDate }}
-</div>
-
-<div *ngFor="let v of myArray; trackBy: getArrayKey">{{v}}</div>
