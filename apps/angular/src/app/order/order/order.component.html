@@ -1,0 +1,12 @@
+<!-- order.component.html -->
+<div>
+    Name: {{order.name}}
+</div>
+<div>
+    Line Items:
+    <div *ngFor="let lineItem of order.lineItems; trackBy:lineItem.id">
+        <!-- order.component.html -->
+        <mc-line-item (editClicked)="handleEditClicked($event)"
+            [item]="lineItem"></mc-line-item>
+    </div>
+</div>
