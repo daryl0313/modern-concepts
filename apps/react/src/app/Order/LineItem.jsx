@@ -4,7 +4,7 @@ import React from 'react';
 export function LineItem(props) {
     const handleEditClick = React.useCallback(() => {
         // LineItem.jsx
-        this.props.onEditClick(props.item.id);
+        props.onEditClick(props.item.id);
     }, [props.item.id]);
     return (
         <>

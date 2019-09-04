@@ -1,8 +1,6 @@
 import React from 'react';
-import { GrandParent } from './components/GrandParent';
-import { PureClassComponent, PureFunctionComponent } from "./pureComponent/PureComponentExamples";
-import Composition from './composition/Composition';
-import { HigherOrderComponentConsumer, HookConsumer } from "./composition/HocAndHooks/HocAndHooks";
+import { Order } from './Order/Order';
+import { OrderService } from './Order/OrderService';
 
 import './app.css';
 
@@ -11,17 +9,8 @@ export const App = () => {
     <div style={{ textAlign: 'center' }}>
       <h1>App Component</h1>
 
-      <GrandParent />
+      <Order orderService={new OrderService()} />
 
-      {/* <PureClassComponent displayThisValue="Value" />
-      <br />
-      <PureFunctionComponent displayThisValue="Value" /> */}
-
-      {/* <Composition /> */}
-
-      {/* <HigherOrderComponentConsumer />
-      <br />
-      <HookConsumer /> */}
     </div>
   );
 };
