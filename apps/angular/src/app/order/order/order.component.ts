@@ -27,5 +27,9 @@ export class OrderComponent implements OnInit, OnChanges, OnDestroy {
   handleEditClicked(lineItemId: number) {
     console.log('Edit was clicked for', lineItemId);
   }
+
+  trackByOrderId(index: number, order: Order) {
+    return order.id;
+  }
 }
 
