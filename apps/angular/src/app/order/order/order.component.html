@@ -1,15 +1,11 @@
-<!-- order.component.html -->
 <div *ngIf="!order">Loading...</div>
-<div *ngIf="order">
+<!-- order.component.html -->
+<mc-panel [title]="order.name">
+  <h2>Line Items:</h2>
   <div>
-    Name: {{order.name}}
-  </div>
-  <div>
-    Line Items:
     <div *ngFor="let lineItem of order.lineItems; trackBy:trackByOrderId">
-      <!-- order.component.html -->
-      <mc-line-item (editClicked)="handleEditClicked($event)"
-          [item]="lineItem"></mc-line-item>
+      <mc-line-item (editClicked)="handleEditClicked($event)" [item]="lineItem"></mc-line-item>
     </div>
   </div>
-</div>
+</mc-panel>
+

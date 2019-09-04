@@ -7,7 +7,7 @@ import './app.css';
 export const App = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>App Component</h1>
+      <h1>React Example</h1>
 
       <Order orderService={new OrderService()} />
 

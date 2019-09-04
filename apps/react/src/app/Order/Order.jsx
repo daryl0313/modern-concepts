@@ -1,6 +1,7 @@
 // Order.jsx
 import React from 'react';
 import { LineItem } from './LineItem';
+import { Panel } from '../composition/Panel/Panel'
 
 export class Order extends React.Component {
   state = {};
@@ -28,20 +29,16 @@ export class Order extends React.Component {
     }
 
     return (
-      <>
-      <div>
-          Name: {this.state.order.name}
-      </div>
-      <div>
-          Line Items:
+      <Panel title={this.state.order.name}>
+        <h2>Line Items</h2>
+        <div>
           {this.state.order.lineItems.map(lineItem =>
-              // Order.jsx
-              <LineItem onEditClick={this.handleEditClick}
-                  item={lineItem} />
+            <LineItem key={lineItem.id} onEditClick={this.handleEditClick}
+              item={lineItem} />
           )}
-      </div>
-  </>
-);
+        </div>
+      </Panel>
+    );
   }
 }
 

@@ -17,6 +17,7 @@ import { OrderComponent } from './order/order/order.component';
 import { LineItemComponent } from './order/line-item/line-item.component';
 import { AddressComponent } from './order/address/address.component';
 import { PanelComponent } from './composition/panel/panel/panel.component';
+import { PanelMultipleChildrenComponent } from './composition/panel/panel-multiple-children/panel-multiple-children.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PanelComponent } from './composition/panel/panel/panel.component';
     SimpleComponent, MultipleComponent, MainComponent, MyDirectiveDirective,
     DoubleComponent, CustomDatePipe,
     OrderComponent, LineItemComponent, AddressComponent,
-    PanelComponent
+    PanelComponent,
+    PanelMultipleChildrenComponent
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

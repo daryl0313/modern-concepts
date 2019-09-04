@@ -9,7 +9,7 @@ export class Panel extends React.Component<IPanelProps> {
     return (
       <div className="panel">
         <div className="panel-title">
-          {this.props.title}
+          <h1>{this.props.title}</h1>
         </div>
         <div className="panel-body">
           {this.props.children}
