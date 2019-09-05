@@ -44,6 +44,9 @@ import { useOrderService } from '../composition/OrderServiceHook';
 // Example: Higher Order Component
 
 // class OrderInternal extends React.Component {
+//   handleEditClick = (id) => {
+//     console.log('Edit was clicked for', id);
+//   }
 //   render() {
 //     return (
 //       <Panel title={this.props.order.name}>
