@@ -1,7 +1,11 @@
 <!-- line-item.component.html -->
-<div>Name: {{item.name}}</div>
-<div>Description: {{item.description}}</div>
-<div>Price: ${{item.price}}</div>
-<div>
-    <button (click)="editClicked">Edit</button>
-</div>
+<mc-panel-multiple-children>
+  <h3 title>{{item.name}}</h3>
+  <ng-container body>
+    <div>Description: {{item.description}}</div>
+    <div>Price: ${{item.price}}</div>
+    <div>
+      <button (click)="editClicked">Edit</button>
+    </div>
+  </ng-container>
+</mc-panel-multiple-children>
