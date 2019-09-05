@@ -9,8 +9,9 @@ export const App = () => {
     <div style={{ textAlign: 'center' }}>
       <h1>React Example</h1>
 
-      <Order orderService={new OrderService()} />
+      {/* <Order orderService={new OrderService()} /> */}
 
+      <Order orderId={1} />
     </div>
   );
 };
