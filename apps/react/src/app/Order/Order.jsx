@@ -2,15 +2,9 @@
 import React from 'react';
 import { LineItem } from './LineItem';
 import { Panel } from '../composition/Panel/Panel'
+import { OrderConsumer } from '../composition/OrderConsumer';
 
 export class Order extends React.Component {
-  state = {};
-
-  async componentDidMount() {
-    const o = await this.props
-      .orderService.getOrder(1);
-    this.setState({ order: o });
-  }
   componentDidUpdate(prevProps) {
     // custom update logic
   }
@@ -24,20 +18,21 @@ export class Order extends React.Component {
   }
 
   render() {
-    if (!this.state.order) {
-      return (<div>Loading...</div>);
-    }
-
     return (
-      <Panel title={this.state.order.name}>
-        <h2>Line Items</h2>
-        <div>
-          {this.state.order.lineItems.map(lineItem =>
-            <LineItem key={lineItem.id} onEditClick={this.handleEditClick}
-              item={lineItem} />
-          )}
-        </div>
-      </Panel>
+      <OrderConsumer orderId={1}>
+        {(order) => (<>
+          <Panel title={order.name}>
+            <h2>Line Items</h2>
+            <div>
+              {order.lineItems.map(lineItem =>
+                <LineItem key={lineItem.id} onEditClick={this.handleEditClick}
+                  item={lineItem} />
+              )}
+            </div>
+          </Panel>
+        </>)
+        }
+      </OrderConsumer>
     );
   }
 }
