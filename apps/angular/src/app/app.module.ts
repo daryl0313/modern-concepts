@@ -18,6 +18,7 @@ import { LineItemComponent } from './order/line-item/line-item.component';
 import { AddressComponent } from './order/address/address.component';
 import { PanelComponent } from './composition/panel/panel/panel.component';
 import { PanelMultipleChildrenComponent } from './composition/panel/panel-multiple-children/panel-multiple-children.component';
+import { HighlightHighCostDirective } from './composition/directives/highlight-high-cost.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PanelMultipleChildrenComponent } from './composition/panel/panel-multip
     DoubleComponent, CustomDatePipe,
     OrderComponent, LineItemComponent, AddressComponent,
     PanelComponent,
-    PanelMultipleChildrenComponent
+    PanelMultipleChildrenComponent,
+    HighlightHighCostDirective
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
